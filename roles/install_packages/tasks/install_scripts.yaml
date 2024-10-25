@@ -1,0 +1,2 @@
+- name: Install AWS CLI from /home/{{ ansible_user }}/aws/install
+  ansible.builtin.command: /home/{{ ansible_user }}/aws/install --update

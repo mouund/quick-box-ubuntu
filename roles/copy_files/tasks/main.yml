@@ -1,0 +1,14 @@
+---
+# tasks file for files
+- include_tasks: etcfiles.yml
+  args:
+    apply:
+      become: true
+  when: 
+  - etcfiles  is iterable
+  - etcfiles  | length > 0
+- include_tasks: dotfiles.yml
+- include_tasks: dirs.yml
+  when: 
+  - dirs is iterable
+  - dirs  | length > 0

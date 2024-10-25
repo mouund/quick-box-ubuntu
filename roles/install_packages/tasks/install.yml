@@ -1,0 +1,10 @@
+---
+# tasks file for packages
+- name: Install packages from repo w/ APT
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages }}"
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution == "Ubuntu"

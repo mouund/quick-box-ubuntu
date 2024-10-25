@@ -1,0 +1,26 @@
+---
+# tasks file for packages
+- include_tasks: upgrade.yml
+  args:
+    apply:
+      become: true
+- include_tasks: install.yml
+  args:
+    apply:
+      become: true
+- include_tasks: install_binaries_from_tar.yaml
+  args:
+    apply:
+      become: true
+- include_tasks: install_scripts_from_tar.yaml
+  args:
+    apply:
+      become: true
+- include_tasks: install_scripts.yaml
+  args:
+    apply:
+      become: true
+- include_tasks: deploy_binaries.yaml
+  args:
+    apply:
+      become: true

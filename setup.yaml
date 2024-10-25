@@ -1,0 +1,14 @@
+---
+- name: install packages
+  hosts: all
+  roles:
+   - role: install_packages
+     message: "installing packages"
+     tags: upgrade
+   - role: deploy_docker
+     message: "Deploying docker"
+     tags: docker
+   - role: copy_files
+     message: "copying files to host"
+   - role: git
+     message: get git repos

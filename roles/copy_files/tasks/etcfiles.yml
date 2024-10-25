@@ -1,0 +1,7 @@
+---
+# tasks file for files
+- name: "etc files copy"
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: /etc/
+  loop: "{{ etcfiles }}"

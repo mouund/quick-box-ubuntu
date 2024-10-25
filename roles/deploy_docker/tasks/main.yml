@@ -1,0 +1,23 @@
+---
+# tasks file for packages
+
+- include_tasks: upgrade.yml
+  args:
+    apply:
+      become: true
+- include_tasks: docker.yaml
+  args:
+    apply:
+      become: true 
+- include_tasks: post_install.yaml
+  args:
+    apply:
+      become: true      
+- include_tasks: start_docker.yaml
+  args:
+    apply:
+      become: true
+- include_tasks: check_hello.yaml
+  args:
+    apply:
+      become: true 

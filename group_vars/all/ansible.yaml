@@ -1,0 +1,5 @@
+# vars file for deploy docker
+ansible_user: ubuntu
+defined_users:
+  - ubuntu
+  - vagrant

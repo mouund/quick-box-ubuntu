@@ -1,0 +1,14 @@
+---
+- name: Get infos on container
+  docker_container_info:
+    name: hello-world
+  register: result
+
+- name: Check if container exits
+  debug:
+    msg: "The container {{ 'exists' if result.exists else 'does not exist' }}"
+
+- name: Print the status of the container
+  debug:
+    msg: "The container status is {{ result.container['State']['Status'] }}"
+  when: result.exists

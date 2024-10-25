@@ -1,0 +1,26 @@
+---
+# vars file for packages
+packages:
+  - vim
+  - git
+  - htop
+  - rsync
+  - aptitude
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+  - python3-pip
+  - virtualenv
+  - python3-setuptools
+  - tar
+  - unzip
+localstack_version: 3.8.0
+kubectl_version: 1.31.2
+binaries_archives_urls:
+  - "https://github.com/localstack/localstack-cli/releases/download/v{{ localstack_version }}/localstack-cli-{{ localstack_version }}-linux-amd64-onefile.tar.gz"
+scripts_archives_url:
+  - "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+binaries_urls: 
+  - "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+repos:

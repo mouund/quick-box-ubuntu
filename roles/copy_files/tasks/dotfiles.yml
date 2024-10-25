@@ -1,0 +1,7 @@
+---
+# tasks file for files
+- name: "copy dotfiles to homedir"
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: ~/
+  loop: "{{ dotfiles }}"

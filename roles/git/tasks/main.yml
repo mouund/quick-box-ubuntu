@@ -1,0 +1,4 @@
+- include_tasks: clone.yaml
+  when: 
+    - repos is iterable
+    - repos  | length > 0

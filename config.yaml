@@ -1,0 +1,10 @@
+configs:
+    use: 'ubuntu-vm'
+    ubuntu-vm:
+        public_ip: '192.168.1.40'
+        box: "ubuntu/jammy64"
+        hostname: ubuntu
+        vb-name: ubuntu
+        network_interface: "wlp61s0"
+        network_type: "public_network"
+    other-vm:

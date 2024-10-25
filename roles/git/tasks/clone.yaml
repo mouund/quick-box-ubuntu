@@ -1,0 +1,9 @@
+---
+# tasks to clone repos
+- name: Clone repos needed into /home/{{ ansible_user }}/{{ item }}
+  ansible.builtin.git:
+    repo: "{{ item }}"
+    dest: /home/{{ ansible_user }}/{{ item }}
+    single_branch: yes
+    version: master
+  loop: "{{ repos }}"

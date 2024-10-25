@@ -1,0 +1,6 @@
+- name: Unarchive scripts to /home/{{ ansible_user }}/
+  unarchive:
+    src: "{{ item }}"
+    dest: "/home/{{ ansible_user }}/"
+    copy: no
+  loop: "{{ scripts_archives_url }}"

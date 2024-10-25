@@ -1,0 +1,8 @@
+---
+# vars file for files
+dotfiles:
+  - .vimrc
+  - .bashrc
+  - .gitconfig
+etcfiles:
+dirs:

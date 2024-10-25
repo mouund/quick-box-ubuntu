@@ -1,0 +1,6 @@
+- name: Unarchive binaries to /usr/local/bin/
+  unarchive:
+    src: "{{ item }}"
+    dest: "/usr/local/bin/"
+    copy: no
+  loop: "{{ binaries_archives_urls }}"
