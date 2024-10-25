@@ -23,4 +23,3 @@ scripts_archives_url:
   - "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
 binaries_urls: 
   - "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
-repos:
