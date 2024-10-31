@@ -17,7 +17,6 @@ alias s='sudo'
 alias dodo='sudo shutdown now'
 alias k='kubectl'
 export do="--dry-run=client -o yaml"
-redshift -P -O 2400
 ###############################################################################
 # Colours
 
