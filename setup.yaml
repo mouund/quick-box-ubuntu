@@ -6,6 +6,8 @@
      message: "installing packages"
    - role: deploy_docker
      message: "Deploying docker"
+   - role: deploy_terraform
+     message: "Deploying terraform"
    - role: copy_files
      message: "copying files to host"
    - role: git

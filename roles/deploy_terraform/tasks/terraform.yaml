@@ -1,0 +1,16 @@
+- name: Add Terraform GPG apt Key
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+    state: present
+
+- name: Add terraform Repository
+  apt_repository:
+    repo: deb https://apt.releases.hashicorp.com focal main
+    state: present
+
+- name: Update apt and install terraform
+  apt:
+    name: terraform
+    state: latest
+    update_cache: true
+

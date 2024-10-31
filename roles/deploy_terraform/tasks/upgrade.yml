@@ -1,0 +1,9 @@
+---
+- name: Run equivalent of apt update && upgrade
+  apt:
+    upgrade: true
+    update_cache: true
+    cache_valid_time: 86400
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution == "Ubuntu"
